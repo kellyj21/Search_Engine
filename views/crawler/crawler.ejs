@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel='stylesheet' href='/css/main.css' />
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+    </head>
+    <body id="crawler">
+
+        <p>URL's scanned:</p>
+        <ul>
+        <% for (let i = 0; i < urlList.length; i++) { %>
+            <li><%= urlList[i] %></li>
+        <% } %>
+        </ul>
+        <br/>
+        
+        <p>Found <%= newArticleCount %> new articles.<br/>Database now contains <%= totalArticleCount %> articles.</p>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="/js/main.js" defer></script>
+    </body>
+</html>

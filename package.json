@@ -1,0 +1,35 @@
+{
+  "name": "search-engine",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/.bin/npm-run-all --parallel sass server crawler",
+    "server": "node --experimental-modules ./bin/www.mjs",
+    "sass": "./node_modules/.bin/node-sass -w styles -o public/css",
+    "crawler": "node --experimental-modules ./bin/crawler_loop.mjs"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ejs": "^2.6.1",
+    "elasticsearch": "^16.5.0",
+    "express": "^4.16.4",
+    "feedparser": "^2.2.9",
+    "feedparser-promised": "^2.0.1",
+    "fs": "0.0.1-security",
+    "fs-readfile-promise": "^3.0.1",
+    "html-entities": "^1.2.1",
+    "javascript-lemmatizer": "0.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "lemmatizer": "0.0.1",
+    "remove-punctuation": "0.0.4",
+    "request-promise-native": "^1.0.8",
+    "stopword": "^0.3.4",
+    "striptags": "^3.1.1",
+    "validator": "^12.1.0",
+    "wink-lemmatizer": "^3.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

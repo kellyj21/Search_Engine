@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Results</title>
+        <link rel='stylesheet' href='/css/main.css' />
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+        <div id="resultsSearch">
+            <form action="/results" id="search-form" >
+                <input required type="text" name="search" id="search" placeholder="Search...">
+                <input type="date" name="begining" id="date">
+                <input type="date" name="end" id="date">
+            </form>
+        </div>
+        <div id="results">
+            <div id="resultsContainer">
+                <% if(results.length > 0) { %>
+                    <% let length = 20; %>
+                    <% if (results.length < 20) {length = results.length} %>
+                    <% for (let i = 0; i < length; i++) {%>
+                        <div class="result">
+                            <h3><a href="<%= results[i].url %>"><%= results[i].title %></a></h3>
+                            <p><a href="<%= results[i].url %>"><%= results[i].url %></a></p>
+                            <p><%= results[i].date.split("T")[0] %></p>
+                            <p class="summary"><%= results[i].reducedSummary %></p>
+                        </div>
+                    <% } %>
+                <% } else { %>
+                    <div class="result">
+                        <p>No results were found</p>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+            
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
