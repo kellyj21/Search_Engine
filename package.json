@@ -19,7 +19,7 @@
     "fs-readfile-promise": "^3.0.1",
     "html-entities": "^1.2.1",
     "javascript-lemmatizer": "0.0.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lemmatizer": "0.0.1",
     "remove-punctuation": "0.0.4",
     "request-promise-native": "^1.0.8",
